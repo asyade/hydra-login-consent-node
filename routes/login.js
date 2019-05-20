@@ -15,7 +15,7 @@ router.get('/', csrfProtection, function (req, res, next) {
   var challenge = query.login_challenge;
 
   hydra.getLoginRequest(challenge)
-  // This will be called if the HTTP request was successful
+    // This will be called if the HTTP request was successful
     .then(function (response) {
       // If hydra was already able to authenticate the user, skip will be true and we do not need to re-authenticate
       // the user.
